@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Instruction_MainActivity">
+
+    <ImageView
+        android:id="@+id/instructionpg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/instruction2" />
+
+    <TextView
+        android:id="@+id/headinginst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/leckerli_one"
+        android:text="Instruction"
+        android:textColorHighlight="#090909"
+        android:textColorHint="#181616"
+        android:textColorLink="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/instructionpg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="@+id/instructionpg"
+        app:layout_constraintTop_toTopOf="@+id/instructionpg"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <TextView
+        android:id="@+id/contentinst"
+        android:layout_width="284dp"
+        android:layout_height="305dp"
+        android:fontFamily="@font/leckerli_one"
+        android:text="Like to write? Here you go. Let your thoughts flow from the mind to the hand onto the papers. Travel through our Diary to Desire app to explore a variety of diaries, each outlined for a unique purpose: travel, gratitude, creative, and many more. Click any diary , and a pop-up screen will appear with descriptions of its purpose and an option to purchase it. "
+        android:textAlignment="center"
+        android:textColor="#121212"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nextbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#efd1b6"
+        android:backgroundTint="#efd1b6"
+        android:foregroundTint="#efd1b6"
+        android:onClick="next"
+        android:text="Next"
+        android:textColorLink="#4E2F2B2B"
+        android:textSize="20sp"
+        app:iconTint="#efd1b6"
+        app:layout_constraintBottom_toBottomOf="@+id/instructionpg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
+
+    <TextView
+        android:id="@+id/displayusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/leckerli_one"
+        android:text="TextView"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/instructionpg"
+        app:layout_constraintVertical_bias="0.084" />
+</androidx.constraintlayout.widget.ConstraintLayout>

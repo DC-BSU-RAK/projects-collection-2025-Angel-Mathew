@@ -29,14 +29,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Make sure this matches your actual XML file name
-        setContentView(R.layout.kitchen_cocomix_mainactivity) // or whatever your XML file is actually named
+
+        setContentView(R.layout.kitchen_cocomix_mainactivity)
 
         initializeViews()
         setupIngredientClickListeners()
         setupMixButtonListener()
 
-        // Instruction popup logic
+        // Instruction popup
         val instrbtn: ImageButton = findViewById(R.id.instrubtn)
         instrbtn.setOnClickListener {
             val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
             mixButton = findViewById(R.id.Mbutton)
             outputImage = findViewById(R.id.outputImage)
 
-            // Initially hide output image
+
             outputImage.visibility = View.GONE
 
             Log.d("ChocolateMixer", "All views initialized successfully")
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupIngredientClickListeners() {
-        // Remove any XML onClick handlers and use these programmatic ones
+
         coconutButton.setOnClickListener { onIngredientClick("coconut", coconutButton) }
         caramelButton.setOnClickListener { onIngredientClick("caramel", caramelButton) }
         waferButton.setOnClickListener { onIngredientClick("wafer", waferButton) }
@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
             imageView.scaleY = 1.0f
             Log.d("ChocolateMixer", "Deselected: $ingredient")
         } else {
-            // Check if max ingredients reached
+            // Checks if max ingredients reached
             if (selectedIngredients.size >= maxIngredients) {
                 Toast.makeText(this, "You can select maximum $maxIngredients ingredients!", Toast.LENGTH_SHORT).show()
                 return
@@ -137,10 +137,10 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // Show loading and start mixing process
+        // start mixing process
         showLoadingScreen()
 
-        // Simulate mixing process with delay
+        // mixing process
         Handler(Looper.getMainLooper()).postDelayed({
             hideLoadingScreen()
             showFinalChocolate()
@@ -151,16 +151,16 @@ class MainActivity : AppCompatActivity() {
         Log.d("ChocolateMixer", "Showing loading screen")
 
         try {
-            // Hide all ingredient buttons
+            // Hide  ingredient buttons
             hideIngredientButtons()
 
-            // Hide mix button during loading
+            // Hide mix button while  loading
             mixButton.visibility = View.GONE
 
             // Show loading image (mixing bowl)
             outputImage.visibility = View.VISIBLE
 
-            // Check if mixing_bowl drawable exists, fallback to chocolate_topping if not
+            // Check if mixing_bowl exist
             try {
                 outputImage.setImageResource(R.drawable.mixing_bowl)
                 Log.d("ChocolateMixer", "Set mixing bowl image")
@@ -179,10 +179,10 @@ class MainActivity : AppCompatActivity() {
         Log.d("ChocolateMixer", "Hiding loading screen")
 
         try {
-            // Show ingredient buttons again
+            // Show ingredient button
             showIngredientButtons()
 
-            // Show mix button again
+            // Show mix button
             mixButton.visibility = View.VISIBLE
         } catch (e: Exception) {
             Log.e("ChocolateMixer", "Error in hideLoadingScreen: ${e.message}")
@@ -190,7 +190,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hideIngredientButtons() {
-        coconutButton.visibility = View.INVISIBLE // Use INVISIBLE instead of GONE to maintain layout
+        coconutButton.visibility = View.INVISIBLE
         caramelButton.visibility = View.INVISIBLE
         waferButton.visibility = View.INVISIBLE
         hazelnutButton.visibility = View.INVISIBLE

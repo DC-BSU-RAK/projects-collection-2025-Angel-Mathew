@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".artjournal">
+
+    <ImageView
+        android:id="@+id/artbg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pop_up_screen" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="331dp"
+        android:layout_height="178dp"
+        android:fontFamily="@font/leckerli_one"
+        android:text="An art journal is a journal filled with imagination in pictures,  patterns, and other materials."
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <TextView
+        android:id="@+id/pricetag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/leckerli_one"
+        android:text="price : 28.50"
+        android:textColor="#0B0B0B"
+        android:textColorHighlight="#090909"
+        android:textColorHint="#090909"
+        android:textColorLink="#0D0C0C"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/artbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/artbg"
+        app:layout_constraintTop_toTopOf="@+id/artbg"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <Button
+        android:id="@+id/buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:fontFamily="@font/leckerli_one"
+        android:text="Buy Now"
+        android:textColor="#050505"
+        android:textColorHighlight="#0D0C0C"
+        app:layout_constraintBottom_toBottomOf="@+id/artbg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708" />
+
+    <Button
+        android:id="@+id/closebtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6DFFFFFF"
+        android:fontFamily="@font/leckerli_one"
+        android:text="Close"
+        android:textColor="#141414"
+        android:textColorHighlight="#121212"
+        android:textColorHint="#121212"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buy" />
+</androidx.constraintlayout.widget.ConstraintLayout>
